@@ -1,705 +1,534 @@
-/* ═══════════════════════════════════════════════════════════
-   THE GRANDEUR — LUXURY DIGITAL EXPERIENCE
-   v3 — Cinematic Hero · Glassmorphism Header · Editorial Layout
-   ═══════════════════════════════════════════════════════════ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Grandeur — Kolkata's Premier Luxury Banquet Hall</title>
+  <meta name="description" content="An unparalleled celebration of architecture, elegance, and grandeur. Kolkata's most prestigious wedding and event destination.">
+  <meta name="theme-color" content="#111111">
 
-/* ─── TOKENS ─── */
-:root {
-  --c-ink:      #141414;
-  --c-ink-2:    #2e2e2e;
-  --c-ink-3:    #4a4a4a;
-  --c-ink-4:    #7a7872;
-  --c-gold:     #b8975a;
-  --c-gold-2:   #c9a96e;
-  --c-gold-3:   #a38544;
-  --c-dark:     #111111;
-  --c-dark-2:   #1c1c1c;
-  --c-dark-3:   #2a2a2a;
-  --c-dark-4:   #3a3a3a;
-  --c-white:    #fafaf8;
-  --c-border:   rgba(0,0,0,0.06);
-  --c-border-d: rgba(0,0,0,0.10);
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500&display=swap" rel="stylesheet">
 
-  --ff-display: 'Cormorant Garamond', 'Georgia', serif;
-  --ff-body:    'Inter', system-ui, sans-serif;
-  --fs-xs:   clamp(0.625rem, 0.58rem + 0.2vw, 0.6875rem);
-  --fs-sm:   clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
-  --fs-base: clamp(0.875rem, 0.82rem + 0.28vw, 0.9375rem);
-  --fs-lg:   clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
-  --fs-xl:   clamp(1.75rem, 1.3rem + 2.2vw, 2.75rem);
-  --fs-2xl:  clamp(2.25rem, 1.5rem + 3.7vw, 4.25rem);
-  --fs-3xl:  clamp(3rem, 1.8rem + 5.8vw, 6.5rem);
-  --fs-hero: clamp(3.5rem, 2rem + 7vw, 8rem);
-  --ls-wide: 0.18em;
-  --ls-mid:  0.10em;
-  --ls-tight: -0.02em;
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  --s-1:  0.25rem; --s-2:  0.5rem; --s-3:  0.75rem; --s-4:  1rem;
-  --s-5:  1.25rem; --s-6:  1.5rem; --s-8:  2rem; --s-10: 2.5rem;
-  --s-12: 3rem; --s-16: 4rem; --s-20: 5rem; --s-24: 6rem;
-  --s-32: 8rem; --s-40: 10rem; --s-48: 12rem;
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="header__wrap">
+      <a href="#" class="header__logo" aria-label="The Grandeur — Home">
+        <span class="header__logo-mark">TG</span>
+        <span class="header__logo-type">The Grandeur</span>
+      </a>
 
-  --max-w: 1320px;
-  --gutter: clamp(1.5rem, 3.5vw, 3.5rem);
-  --header-h: clamp(3.5rem, 5vw, 4.5rem);
-  --ease:  cubic-bezier(0.22, 1, 0.36, 1);
-  --ease2: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease3: cubic-bezier(0.76, 0, 0.24, 1);
-}
+      <nav class="header__nav" id="headerNav">
+        <a href="#intro" class="header__link">About</a>
+        <a href="#why" class="header__link">Why Us</a>
+        <a href="#testimonials" class="header__link">Stories</a>
+        <a href="#events" class="header__link">Events</a>
+        <a href="#booking" class="header__link header__link--cta">Book Now</a>
+      </nav>
 
-/* ─── RESET ─── */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;scroll-behavior:auto;font-size:16px}
-html.lenis,html.lenis body{height:auto}
-.lenis.lenis-smooth{scroll-behavior:auto!important}
-body{font-family:var(--ff-body);font-weight:300;color:var(--c-ink);background:#EFE3CF;line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;height:auto;display:block}
-button{background:none;border:none;cursor:pointer;font:inherit;color:inherit}
-ul,ol{list-style:none}
-input,textarea,select{font:inherit;color:inherit;border:none;background:none;outline:none}
-::selection{background:var(--c-gold);color:var(--c-white)}
+      <button class="header__menu" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-.tag{display:inline-block;font-family:var(--ff-body);font-size:var(--fs-xs);font-weight:500;letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--c-gold);margin-bottom:var(--s-8)}
-.tag--light{color:var(--c-gold-2)}
+  <!-- ═══ MOBILE OVERLAY ═══ -->
+  <div class="overlay" id="overlay">
+    <div class="overlay__bg"></div>
+    <div class="overlay__content">
+      <nav class="overlay__nav">
+        <a href="#intro" class="overlay__link"><span class="overlay__link-num">01</span>About</a>
+        <a href="#why" class="overlay__link"><span class="overlay__link-num">02</span>Why Us</a>
+        <a href="#testimonials" class="overlay__link"><span class="overlay__link-num">03</span>Stories</a>
+        <a href="#events" class="overlay__link"><span class="overlay__link-num">04</span>Events</a>
+        <a href="#booking" class="overlay__link"><span class="overlay__link-num">05</span>Book Now</a>
+      </nav>
+      <div class="overlay__footer">
+        <a href="tel:+919876543210">+91 98765 43210</a>
+        <span>12 Park Street, Kolkata 700016</span>
+      </div>
+    </div>
+  </div>
 
-/* ═══════════════════════════════════════════
-   LUXURY SURFACE — reusable material
-   ═══════════════════════════════════════════ */
-.luxury-surface{
-  background:
-    radial-gradient(circle at top left,rgba(170,119,28,0.12) 0%,transparent 35%),
-    radial-gradient(circle at bottom right,rgba(170,119,28,0.06) 0%,transparent 45%),
-    linear-gradient(135deg,#EFE3CF 0%,#E7D7BE 35%,#DDC8A6 70%,#F2E8D7 100%);
-  position:relative;
-}
-.luxury-surface::before{
-  content:'';position:absolute;inset:0;pointer-events:none;opacity:.04;
-  mix-blend-mode:soft-light;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:cover;
-}
-.luxury-surface::after{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(circle at 20% 15%,rgba(170,119,28,0.10),transparent 35%);
-}
-.luxury-surface>*{position:relative;z-index:1}
+  <main id="smooth">
 
-/* ═══════════════════════════════════════════
-   HEADER — GLASSMORPHISM
-   ═══════════════════════════════════════════ */
-.header{
-  position:fixed;top:0;left:0;right:0;
-  z-index:9999;
-  height:var(--header-h);
-  transition:background .45s,-webkit-backdrop-filter .45s,backdrop-filter .45s,border-color .45s;
-  border-bottom:1px solid transparent;
-}
-.header.is-scrolled{
-  background:rgba(244,241,235,0.82);
-  -webkit-backdrop-filter:saturate(180%) blur(24px) brightness(1.02);
-  backdrop-filter:saturate(180%) blur(24px) brightness(1.02);
-  border-bottom-color:var(--c-border);
-}
-body.section-dark .header{
-  border-bottom-color:transparent;
-}
-body.section-dark .header.is-scrolled{
-  background:rgba(17,17,17,0.82);
-  border-bottom-color:rgba(255,255,255,0.06);
-}
-.header__wrap{
-  max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter);
-  height:100%;display:flex;align-items:center;justify-content:space-between;
-}
-.header__logo{display:flex;align-items:center;gap:var(--s-3)}
-.header__logo-mark{
-  font-family:var(--ff-display);font-size:1.05rem;font-weight:500;
-  color:var(--c-ink);
-  width:34px;height:34px;
-  border:1px solid var(--c-border-d);
-  display:flex;align-items:center;justify-content:center;
-  border-radius:1px;
-  transition:border-color .3s,color .3s;
-}
-.header__logo:hover .header__logo-mark{border-color:var(--c-gold)}
-.header__logo-type{font-family:var(--ff-display);font-size:.95rem;font-weight:400;letter-spacing:.06em}
-body.section-dark .header__logo-mark{color:var(--c-white);border-color:rgba(255,255,255,0.12)}
-body.section-dark .header__logo-type{color:var(--c-white)}
+    <!-- ═══ HERO — CINEMATIC EDITORIAL ═══ -->
+    <section class="hero" data-section="hero">
+      <!-- Full-width background -->
+      <div class="hero__bg">
+        <div class="hero__bg-img" id="heroBgImg"></div>
+        <div class="hero__bg-overlay"></div>
+        <div class="hero__bg-vignette"></div>
+      </div>
 
-.header__nav{display:flex;align-items:center;gap:var(--s-10)}
-.header__link{
-  font-size:var(--fs-xs);font-weight:400;letter-spacing:var(--ls-wide);text-transform:uppercase;
-  color:var(--c-ink-3);position:relative;padding:var(--s-1) 0;
-  transition:color .3s;
-}
-.header__link::after{
-  content:'';position:absolute;bottom:-1px;left:0;width:100%;height:1px;
-  background:var(--c-gold);
-  transform:scaleX(0);transform-origin:right;
-  transition:transform .45s var(--ease);
-}
-.header__link:hover{color:var(--c-ink)}
-.header__link:hover::after{transform:scaleX(1);transform-origin:left}
-.header__link--cta{
-  background:var(--c-ink);color:var(--c-white)!important;
-  padding:.55rem 1.4rem;font-weight:400;letter-spacing:var(--ls-mid);
-  transition:background .3s,transform .3s;
-}
-.header__link--cta::after{display:none}
-.header__link--cta:hover{background:var(--c-gold);transform:translateY(-1px)}
-body.section-dark .header__link{color:rgba(255,255,255,0.5)}
-body.section-dark .header__link:hover{color:var(--c-white)}
+      <!-- Content — centered editorial -->
+      <div class="hero__content">
 
-.header__menu{display:none;width:28px;height:18px;flex-direction:column;justify-content:space-between}
-.header__menu span{display:block;width:100%;height:1px;background:var(--c-ink);transition:transform .4s var(--ease),opacity .3s;transform-origin:center}
-body.section-dark .header__menu span{background:var(--c-white)}
-.header__menu.is-open span:first-child{transform:translateY(8.5px) rotate(45deg)}
-.header__menu.is-open span:last-child{transform:translateY(-8.5px) rotate(-45deg)}
-@media(max-width:768px){.header__nav{display:none}.header__menu{display:flex}}
+        <div class="hero__divider" id="heroDivider"></div>
 
-/* ─── OVERLAY ─── */
-.overlay{position:fixed;inset:0;z-index:850;pointer-events:none;opacity:0;transition:opacity .5s var(--ease)}
-.overlay.is-open{pointer-events:auto;opacity:1}
-.overlay__bg{position:absolute;inset:0;background:var(--c-dark)}
-.overlay__content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:var(--s-8)}
-.overlay__nav{text-align:center}
-.overlay__link{
-  display:block;font-family:var(--ff-display);font-size:clamp(2rem,6vw,3rem);font-weight:300;
-  color:var(--c-white);padding:var(--s-3) 0;
-  opacity:0;transform:translateY(20px);
-  transition:opacity .4s,transform .5s var(--ease2),color .3s;
-}
-.overlay.is-open .overlay__link{opacity:1;transform:translateY(0)}
-.overlay__link:hover{color:var(--c-gold)}
-.overlay__link-num{font-family:var(--ff-body);font-size:var(--fs-xs);font-weight:500;color:var(--c-gold);vertical-align:super;margin-right:var(--s-2);letter-spacing:.1em}
-.overlay__footer{margin-top:var(--s-16);text-align:center;opacity:0;transition:opacity .5s .3s}
-.overlay.is-open .overlay__footer{opacity:1}
-.overlay__footer a,.overlay__footer span{display:block;font-size:var(--fs-sm);color:var(--c-ink-4);margin-bottom:var(--s-2)}
-.overlay__footer a:hover{color:var(--c-gold)}
+        <h1 class="hero__title" id="heroTitle">
+          <span class="hero__line"><span class="hero__word">Where</span></span>
+          <span class="hero__line"><span class="hero__word hero__word--italic">Grandeur</span></span>
+          <span class="hero__line"><span class="hero__word">Becomes</span></span>
+          <span class="hero__line"><span class="hero__word hero__word--italic">Memory</span></span>
+        </h1>
 
-/* ═══════════════════════════════════════════
-   HERO — CENTERED LUXURY EDITORIAL
-   ═══════════════════════════════════════════ */
-.hero{
-  position:relative;width:100%;min-height:100vh;
-  display:grid;place-items:center;
-  overflow:hidden;background:var(--c-dark);
-}
+        <p class="hero__sub" id="heroSub">
+          Kolkata's most distinguished celebration venue,<br>
+          where timeless architecture meets unparalleled elegance.
+        </p>
 
-/* Background — full-bleed Ken Burns */
-.hero__bg{position:absolute;inset:0;z-index:0}
-.hero__bg-img{
-  position:absolute;inset:0;width:100%;height:100%;
-  background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&q=80');
-  background-size:cover;background-position:center 30%;
-  will-change:transform;
-  transform:scale(1.15);
-  filter:brightness(0.5) saturate(1.1) contrast(1.05);
-  animation:kenBurns 25s ease-in-out infinite alternate;
-}
-@keyframes kenBurns{
-  0%{transform:scale(1.15) translate(0,0)}
-  100%{transform:scale(1.05) translate(-0.5%,-0.5%)}
-}
-.hero__bg-overlay{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(180deg,
-      rgba(10,10,10,0.4) 0%,
-      rgba(10,10,10,0.15) 30%,
-      rgba(10,10,10,0.15) 60%,
-      rgba(10,10,10,0.5) 100%
-    );
-}
-.hero__bg-vignette{
-  position:absolute;inset:0;
-  background:radial-gradient(ellipse at center,transparent 0%,rgba(10,10,10,0.35) 100%);
-}
+        <a href="#booking" class="hero__cta" id="heroCta">
+          <span class="hero__cta-fill"></span>
+          <span class="hero__cta-label">Book Your Date</span>
+          <span class="hero__cta-arrow">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M4 9H14M14 9L10 5M14 9L10 13" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+          </span>
+        </a>
+      </div>
 
-/* Content — perfectly centered */
-.hero__content{
-  position:relative;z-index:2;
-  width:min(90vw,700px);
-  display:flex;flex-direction:column;align-items:center;
-  text-align:center;
-}
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" id="heroScroll">
+        <span class="hero__scroll-label">Scroll</span>
+        <div class="hero__scroll-track">
+          <div class="hero__scroll-thumb"></div>
+        </div>
+      </div>
+    </section>
 
-/* Decorative divider */
-.hero__divider{
-  width:1px;height:clamp(2rem,4vh,3.5rem);
-  background:linear-gradient(180deg,var(--c-gold-2),transparent);
-  margin-bottom:var(--s-10);
-  opacity:0;
-}
+    <!-- ═══ BRAND INTRO — ARCHITECTURAL SURFACE ═══ -->
+    <section class="intro" data-section="intro" id="intro">
+      <!-- Architectural surface layers -->
+      <div class="intro__layer intro__layer--brushed"></div>
+      <div class="intro__layer intro__layer--light"></div>
+      <div class="intro__layer intro__layer--vignette"></div>
+      <div class="intro__layer intro__layer--noise"></div>
+      <div class="intro__layer intro__layer--reflect"></div>
+      <div class="intro__layer intro__layer--glow"></div>
+      <div class="intro__layer intro__layer--ambient"></div>
 
-/* Title — massive stacked serif */
-.hero__title{margin-bottom:var(--s-10)}
-.hero__line{
-  display:block;overflow:hidden;
-  padding-bottom:0.02em;
-}
-.hero__word{
-  display:inline-block;
-  font-family:var(--ff-display);font-weight:300;
-  font-size:clamp(5.5rem,9vw,8.5rem);
-  color:var(--c-white);line-height:1.05;letter-spacing:-0.03em;
-  transform:translateY(105%);will-change:transform;
-}
-.hero__word--italic{
-  font-style:italic;
-  color:var(--c-gold-2);
-}
+      <div class="intro__wrap">
+        <div class="intro__col intro__col--left">
+          <div class="intro__tag">
+            <span>01 &mdash; Introduction</span>
+            <span class="intro__tag-line"></span>
+          </div>
+          <h2 class="intro__heading">
+            A sanctuary<br>
+            <em>of celebration</em>
+          </h2>
+          <div class="intro__divider"></div>
+          <p class="intro__body">For over three decades, The Grandeur has been the silent witness to Kolkata's most extraordinary moments &mdash; from opulent weddings to imperial galas. Every corner breathes heritage, every hall tells a story.</p>
+        </div>
+        <div class="intro__col intro__col--right">
+          <div class="intro__img-frame">
+            <img class="intro__img" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80" alt="The Grandeur interior" loading="lazy">
+          </div>
+          <span class="intro__caption">The Grand Ballroom</span>
+        </div>
+      </div>
+    </section>
 
-/* Subtitle */
-.hero__sub{
-  font-size:var(--fs-base);color:rgba(255,255,255,0.45);line-height:1.9;
-  max-width:420px;
-  margin-bottom:var(--s-12);
-  opacity:0;
-}
+    <!-- ═══ WHY CHOOSE US ═══ -->
+    <section class="why" data-section="why" id="why">
+      <div class="why__wrap">
+        <div class="why__header">
+          <span class="tag tag--light">02 &mdash; Distinction</span>
+          <h2 class="why__heading">
+            Why the discerning<br>
+            <em>choose us</em>
+          </h2>
+        </div>
+        <div class="why__list">
+          <article class="why__item">
+            <span class="why__num">01</span>
+            <div class="why__content">
+              <h3 class="why__item-title">Architectural Distinction</h3>
+              <p class="why__item-text">Each hall is a world of its own &mdash; designed by award-winning architects who understand that great spaces don't just hold events, they elevate them.</p>
+            </div>
+          </article>
+          <article class="why__item">
+            <span class="why__num">02</span>
+            <div class="why__content">
+              <h3 class="why__item-title">Bespoke Service</h3>
+              <p class="why__item-text">A dedicated concierge team assigned to every event. From the first consultation to the final farewell, every detail is orchestrated with precision and care.</p>
+            </div>
+          </article>
+          <article class="why__item">
+            <span class="why__num">03</span>
+            <div class="why__content">
+              <h3 class="why__item-title">Culinary Excellence</h3>
+              <p class="why__item-text">Our in-house culinary atelier, led by Master Chef Arjun Mehta, crafts menus that are as visually stunning as they are gastronomically extraordinary.</p>
+            </div>
+          </article>
+          <article class="why__item">
+            <span class="why__num">04</span>
+            <div class="why__content">
+              <h3 class="why__item-title">Heritage &amp; Trust</h3>
+              <p class="why__item-text">Three generations of hospitality excellence. The families who celebrated here return for every milestone &mdash; that trust is our greatest accomplishment.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-/* CTA — thin gold border, transparent */
-.hero__cta{
-  display:inline-flex;align-items:center;gap:var(--s-3);
-  font-family:var(--ff-body);font-size:var(--fs-xs);font-weight:500;
-  letter-spacing:var(--ls-wide);text-transform:uppercase;
-  padding:1rem 2.4rem;
-  border:1px solid rgba(201,169,110,0.35);
-  color:var(--c-white);
-  position:relative;overflow:hidden;cursor:pointer;
-  opacity:0;transition:color .4s;
-}
-.hero__cta-fill{
-  position:absolute;inset:0;
-  background:var(--c-gold);
-  transform:scaleX(0);transform-origin:right;
-  transition:transform .55s var(--ease2);
-}
-.hero__cta:hover{color:var(--c-dark)}
-.hero__cta:hover .hero__cta-fill{transform:scaleX(1);transform-origin:left}
-.hero__cta-label,.hero__cta-arrow{position:relative;z-index:1}
-.hero__cta-arrow{display:flex;align-items:center;transition:transform .4s var(--ease)}
-.hero__cta:hover .hero__cta-arrow{transform:translateX(3px)}
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="testimonials luxury-surface" data-section="testimonials" id="testimonials">
+      <div class="testimonials__wrap">
+        <div class="testimonials__header">
+          <span class="tag">03 &mdash; Stories</span>
+          <h2 class="testimonials__heading">
+            Words from<br>
+            <em>our patrons</em>
+          </h2>
+        </div>
+        <div class="testimonials__stage">
+          <div class="testimonial testimonial--active" data-slide="0">
+            <blockquote class="testimonial__quote">
+              <p>"The Grandeur didn't just host our wedding &mdash; it became part of our story. Every guest still speaks about the evening with awe. It was, in every sense, magnificent."</p>
+            </blockquote>
+            <div class="testimonial__meta">
+              <span class="testimonial__name">Priya &amp; Vikram Bose</span>
+              <span class="testimonial__detail">Wedding, December 2025</span>
+            </div>
+          </div>
+          <div class="testimonial" data-slide="1">
+            <blockquote class="testimonial__quote">
+              <p>"We've hosted corporate events across the world. The Grandeur's attention to detail, their understanding of brand presence, and the sheer beauty of the space is unmatched."</p>
+            </blockquote>
+            <div class="testimonial__meta">
+              <span class="testimonial__name">Anirban Sengupta</span>
+              <span class="testimonial__detail">Annual Gala, Tata Group</span>
+            </div>
+          </div>
+          <div class="testimonial" data-slide="2">
+            <blockquote class="testimonial__quote">
+              <p>"Three generations of our family have celebrated at The Grandeur. My daughter's wedding was just as extraordinary as my mother's reception here in 1991. Timeless."</p>
+            </blockquote>
+            <div class="testimonial__meta">
+              <span class="testimonial__name">Sharmila &amp; Arindam Sen</span>
+              <span class="testimonial__detail">Wedding, February 2026</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__controls">
+          <button class="testimonials__btn" id="testPrev" aria-label="Previous testimonial">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="1.2"/></svg>
+          </button>
+          <div class="testimonials__progress">
+            <div class="testimonials__progress-fill" id="testProgress"></div>
+          </div>
+          <button class="testimonials__btn" id="testNext" aria-label="Next testimonial">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="1.2"/></svg>
+          </button>
+          <span class="testimonials__count"><span id="testCurrent">01</span> / 03</span>
+        </div>
+      </div>
+    </section>
 
-/* Scroll indicator — bottom center */
-.hero__scroll{
-  position:absolute;bottom:clamp(2rem,5vh,4rem);left:50%;transform:translateX(-50%);z-index:2;
-  display:flex;flex-direction:column;align-items:center;gap:var(--s-3);opacity:0;
-}
-.hero__scroll-label{
-  font-size:.5625rem;font-weight:500;letter-spacing:var(--ls-wide);
-  text-transform:uppercase;color:rgba(255,255,255,0.35);
-}
-.hero__scroll-track{width:1px;height:3.5rem;background:rgba(255,255,255,0.1);position:relative;overflow:hidden}
-.hero__scroll-thumb{
-  position:absolute;top:-100%;left:0;width:100%;height:100%;
-  background:var(--c-gold-2);animation:scrollPulse 1.8s ease-in-out infinite;
-}
-@keyframes scrollPulse{0%{top:-100%}100%{top:100%}}
+    <!-- ═══ GALLERY ═══ -->
+    <section class="gallery luxury-surface" data-section="gallery" id="gallery">
+      <div class="gallery__wrap">
+        <div class="gallery__header">
+          <div class="gallery__header-left">
+            <span class="tag">04 &mdash; Gallery</span>
+            <h2 class="gallery__heading">
+              A glimpse into<br>
+              <em>our world</em>
+            </h2>
+          </div>
+          <p class="gallery__sub">Every detail, every corner, every moment &mdash; crafted to be unforgettable.</p>
+        </div>
+        <div class="gallery__grid">
+          <div class="gallery__item gallery__item--wide" data-gallery="0">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=900&q=80" alt="Grand Ballroom" loading="lazy">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-label">Grand Ballroom</span>
+              <span class="gallery__item-plus"></span>
+            </div>
+          </div>
+          <div class="gallery__item gallery__item--tall" data-gallery="1">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80" alt="Crystal Court" loading="lazy">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-label">Crystal Court</span>
+              <span class="gallery__item-plus"></span>
+            </div>
+          </div>
+          <div class="gallery__item" data-gallery="2">
+            <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=600&q=80" alt="Amber Hall" loading="lazy">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-label">Amber Hall</span>
+              <span class="gallery__item-plus"></span>
+            </div>
+          </div>
+          <div class="gallery__item" data-gallery="3">
+            <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80" alt="Rose Pavilion" loading="lazy">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-label">Rose Pavilion</span>
+              <span class="gallery__item-plus"></span>
+            </div>
+          </div>
+          <div class="gallery__item gallery__item--wide" data-gallery="4">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80" alt="Rooftop Garden" loading="lazy">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-label">Rooftop Garden</span>
+              <span class="gallery__item-plus"></span>
+            </div>
+          </div>
+          <div class="gallery__item" data-gallery="5">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Culinary Experience" loading="lazy">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-label">Culinary</span>
+              <span class="gallery__item-plus"></span>
+            </div>
+          </div>
+          <div class="gallery__item gallery__item--tall" data-gallery="6">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding Setup" loading="lazy">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-label">Wedding</span>
+              <span class="gallery__item-plus"></span>
+            </div>
+          </div>
+          <div class="gallery__item" data-gallery="7">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80" alt="Bridal Suite" loading="lazy">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-label">Bridal Suite</span>
+              <span class="gallery__item-plus"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Tablet */
-@media(max-width:1024px){
-  .hero__word{font-size:clamp(4rem,8vw,6rem)}
-}
+    <!-- ═══ LIGHTBOX ═══ -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+      <button class="lightbox__prev" id="lightboxPrev" aria-label="Previous">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 4L7 12L15 20" stroke="currentColor" stroke-width="1.2"/></svg>
+      </button>
+      <button class="lightbox__next" id="lightboxNext" aria-label="Next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 4L17 12L9 20" stroke="currentColor" stroke-width="1.2"/></svg>
+      </button>
+      <div class="lightbox__content">
+        <img class="lightbox__img" id="lightboxImg" src="" alt="">
+        <span class="lightbox__caption" id="lightboxCaption"></span>
+        <span class="lightbox__count" id="lightboxCount"></span>
+      </div>
+    </div>
 
-/* Mobile */
-@media(max-width:640px){
-  .hero__word{font-size:clamp(3rem,12vw,4.5rem)}
-  .hero__sub{
-    font-size:var(--fs-sm);max-width:90vw;
-  }
-  .hero__cta{padding:0.85rem 1.8rem}
-  .hero__divider{height:clamp(1.5rem,3vh,2.5rem)}
-  .hero__scroll{display:none}
-}
+    <!-- ═══ STATISTICS ═══ -->
+    <section class="stats luxury-surface" data-section="stats" id="stats">
+      <div class="stats__wrap">
+        <div class="stats__item">
+          <span class="stats__val" data-count="2500">0</span>
+          <span class="stats__label">Events Celebrated</span>
+        </div>
+        <div class="stats__sep"></div>
+        <div class="stats__item">
+          <span class="stats__val" data-count="37">0</span>
+          <span class="stats__label">Years of Trust</span>
+        </div>
+        <div class="stats__sep"></div>
+        <div class="stats__item">
+          <span class="stats__val stats__val--suffix" data-count="98">0</span>
+          <span class="stats__label">Client Satisfaction</span>
+        </div>
+        <div class="stats__sep"></div>
+        <div class="stats__item">
+          <span class="stats__val" data-count="3">0</span>
+          <span class="stats__label">Grand Ballrooms</span>
+        </div>
+      </div>
+    </section>
 
-/* ═══════════════════════════════════════════
-   INTRO — ARCHITECTURAL SURFACE
-   ═══════════════════════════════════════════ */
-.intro{
-  position:relative;
-  padding:clamp(5rem,10vh,8rem) var(--gutter) clamp(5rem,10vh,8rem);
-  overflow:hidden;
-  background:
-    linear-gradient(rgba(18,15,12,.35),rgba(18,15,12,.35)),
-    url('/textures/champagne-metal.webp');
-  background-size:cover;
-  background-position:center;
-}
+    <!-- ═══ EVENT TYPES ═══ -->
+    <section class="event-types luxury-surface" data-section="event-types" id="events">
+      <div class="event-types__wrap">
+        <div class="event-types__header">
+          <span class="tag">05 &mdash; Experiences</span>
+          <h2 class="event-types__heading">
+            Events we<br>
+            <em>bring to life</em>
+          </h2>
+          <p class="event-types__sub">From intimate gatherings to grand celebrations, every occasion deserves an extraordinary setting.</p>
+        </div>
+        <div class="event-types__grid">
+          <article class="event-type" data-speed="0.95">
+            <div class="event-type__img">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700&q=80" alt="Weddings" loading="lazy">
+            </div>
+            <div class="event-type__info">
+              <span class="event-type__num">01</span>
+              <h3 class="event-type__title">Weddings</h3>
+              <p class="event-type__text">From intimate nikah ceremonies to extravagant receptions. We orchestrate love stories that become legendary.</p>
+            </div>
+          </article>
+          <article class="event-type" data-speed="1.05">
+            <div class="event-type__img">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&q=80" alt="Corporate Events" loading="lazy">
+            </div>
+            <div class="event-type__info">
+              <span class="event-type__num">02</span>
+              <h3 class="event-type__title">Corporate Events</h3>
+              <p class="event-type__text">Conferences, AGMs, product launches. State-of-the-art AV with a level of polish your brand deserves.</p>
+            </div>
+          </article>
+          <article class="event-type" data-speed="0.92">
+            <div class="event-type__img">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80" alt="Gala Dinners" loading="lazy">
+            </div>
+            <div class="event-type__info">
+              <span class="event-type__num">03</span>
+              <h3 class="event-type__title">Gala Dinners</h3>
+              <p class="event-type__text">Black-tie evenings, charity galas, and social gatherings that demand nothing less than extraordinary.</p>
+            </div>
+          </article>
+          <article class="event-type" data-speed="1.08">
+            <div class="event-type__img">
+              <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?w=700&q=80" alt="Engagement Ceremonies" loading="lazy">
+            </div>
+            <div class="event-type__info">
+              <span class="event-type__num">04</span>
+              <h3 class="event-type__title">Engagements</h3>
+              <p class="event-type__text">Celebrate the beginning of forever in settings as romantic as your story.</p>
+            </div>
+          </article>
+          <article class="event-type" data-speed="0.97">
+            <div class="event-type__img">
+              <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?w=700&q=80" alt="Sangeet & Mehendi" loading="lazy">
+            </div>
+            <div class="event-type__info">
+              <span class="event-type__num">05</span>
+              <h3 class="event-type__title">Sangeet &amp; Mehendi</h3>
+              <p class="event-type__text">Vibrant pre-wedding celebrations with colorful decor, music, and joyful energy.</p>
+            </div>
+          </article>
+          <article class="event-type" data-speed="1.03">
+            <div class="event-type__img">
+              <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=80" alt="Reception Parties" loading="lazy">
+            </div>
+            <div class="event-type__info">
+              <span class="event-type__num">06</span>
+              <h3 class="event-type__title">Reception Parties</h3>
+              <p class="event-type__text">Grand welcomes and farewell dinners that leave lasting impressions on every guest.</p>
+            </div>
+          </article>
+          <article class="event-type" data-speed="0.93">
+            <div class="event-type__img">
+              <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=700&q=80" alt="Birthday Celebrations" loading="lazy">
+            </div>
+            <div class="event-type__info">
+              <span class="event-type__num">07</span>
+              <h3 class="event-type__title">Birthday Celebrations</h3>
+              <p class="event-type__text">Milestone birthdays deserve milestone venues. From 1st birthdays to golden anniversaries.</p>
+            </div>
+          </article>
+          <article class="event-type" data-speed="1.06">
+            <div class="event-type__img">
+              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=700&q=80" alt="Anniversary Celebrations" loading="lazy">
+            </div>
+            <div class="event-type__info">
+              <span class="event-type__num">08</span>
+              <h3 class="event-type__title">Anniversaries</h3>
+              <p class="event-type__text">Recreate the magic of your special day with celebrations that honor your journey together.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-/* All layers share base positioning */
-.intro__layer{
-  position:absolute;inset:0;pointer-events:none;
-}
+    <!-- ═══ BOOKING ═══ -->
+    <section class="booking luxury-surface" data-section="booking" id="booking">
+      <div class="booking__wrap">
+        <span class="tag">06 &mdash; Enquire</span>
+        <h2 class="booking__heading">
+          Let's Create<br>
+          <em>Something Beautiful</em>
+        </h2>
+        <p class="booking__text">Your celebration deserves a space as extraordinary as the moments it holds.</p>
+        <div class="booking__info">
+          <div class="booking__info-item">
+            <span class="booking__info-label">Direct Line</span>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </div>
+          <div class="booking__info-item">
+            <span class="booking__info-label">Email</span>
+            <a href="mailto:events@thegrandeur.in">events@thegrandeur.in</a>
+          </div>
+          <div class="booking__info-item">
+            <span class="booking__info-label">Address</span>
+            <span>12 Park Street, Kolkata 700016</span>
+          </div>
+        </div>
+        <div class="booking__map">
+          <div class="map__pin">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <span>12 Park Street, Kolkata 700016</span>
+          </div>
+        </div>
+        <div class="booking__cta">
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="whatsapp" aria-label="Chat on WhatsApp">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-/* Layer 2 — Brushed-metal texture (SVG feTurbulence directional noise) */
-.intro__layer--brushed{
-  z-index:1;
-  opacity:0.035;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.015 0.8' numOctaves='3' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23b)'/%3E%3C/svg%3E");
-  background-size:400px 400px;
-}
+  </main>
 
-/* Layer 3 — Soft radial light from top-left */
-.intro__layer--light{
-  z-index:2;
-  background:radial-gradient(ellipse 75% 65% at 12% 8%,rgba(242,231,211,0.5) 0%,rgba(230,219,200,0.2) 35%,transparent 65%);
-}
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="footer__wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__wordmark">The Grandeur</span>
+          <span class="footer__tagline">Kolkata's Premier Luxury Banquet Hall</span>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <span class="footer__col-head">Explore</span>
+            <a href="#intro">About</a>
+            <a href="#why">Why Us</a>
+            <a href="#testimonials">Stories</a>
+            <a href="#gallery">Gallery</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-head">Plan</span>
+            <a href="#booking">Book Now</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Location</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-head">Connect</span>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+            <a href="mailto:events@thegrandeur.in">events@thegrandeur.in</a>
+            <span>12 Park Street, Kolkata 700016</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2026 The Grandeur. All rights reserved.</span>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Pinterest">PN</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-/* Layer 4 — Dark vignette around edges */
-.intro__layer--vignette{
-  z-index:3;
-  background:radial-gradient(ellipse 70% 60% at 50% 50%,transparent 0%,rgba(18,15,12,0.15) 100%);
-}
-
-/* Layer 5 — Fine noise texture */
-.intro__layer--noise{
-  z-index:4;
-  opacity:0.025;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' seed='12' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:256px 256px;
-}
-
-/* Layer 6 — Reflected light (simulates light bouncing off the image) */
-.intro__layer--reflect{
-  z-index:5;
-  background:radial-gradient(ellipse 50% 80% at 75% 50%,rgba(214,178,122,0.06) 0%,transparent 70%);
-}
-
-/* Layer 7 — Large blurred golden reflections (< 8% opacity) */
-.intro__layer--glow{
-  z-index:6;
-  background:
-    radial-gradient(ellipse 40% 35% at 30% 25%,rgba(214,178,122,0.06) 0%,transparent 100%),
-    radial-gradient(ellipse 35% 40% at 70% 70%,rgba(199,160,107,0.04) 0%,transparent 100%),
-    radial-gradient(ellipse 50% 30% at 50% 90%,rgba(229,209,165,0.05) 0%,transparent 100%);
-}
-
-/* Layer 8 — Ambient shadows (inset depth) */
-.intro__layer--ambient{
-  z-index:7;
-  box-shadow:
-    inset 0 3px 30px rgba(0,0,0,0.08),
-    inset 0 -3px 30px rgba(0,0,0,0.06),
-    inset 3px 0 40px rgba(0,0,0,0.04),
-    inset -3px 0 40px rgba(0,0,0,0.04);
-}
-
-/* ─── Content Wrapper ─── */
-.intro__wrap{
-  position:relative;z-index:10;
-  display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);
-  align-items:center;
-  max-width:var(--max-w);margin:0 auto;
-}
-
-/* ─── Left Column — Editorial Typography ─── */
-.intro__col--left{
-  display:flex;flex-direction:column;
-}
-
-.intro__tag{
-  display:inline-flex;align-items:center;gap:var(--s-4);
-  font-family:var(--ff-body);font-size:var(--fs-xs);font-weight:500;
-  letter-spacing:var(--ls-wide);text-transform:uppercase;
-  color:#9C7443;
-  margin-bottom:var(--s-10);
-}
-.intro__tag-line{
-  width:2.5rem;height:1px;
-  background:linear-gradient(90deg,#9C7443,transparent);
-}
-
-.intro__heading{
-  font-family:var(--ff-display);font-size:var(--fs-2xl);font-weight:300;
-  line-height:1.06;color:#3A2A1E;
-  margin-bottom:var(--s-8);
-}
-.intro__heading em{
-  font-style:italic;color:#9C7443;
-}
-
-/* Decorative gold divider */
-.intro__divider{
-  width:clamp(3rem,5vw,4.5rem);height:1px;
-  background:#D6B27A;
-  margin-bottom:var(--s-8);
-}
-
-.intro__body{
-  font-size:var(--fs-base);color:#6b5a4a;line-height:1.85;
-  max-width:440px;
-}
-
-/* ─── Right Column — Image ─── */
-.intro__col--right{
-  display:flex;flex-direction:column;
-}
-
-.intro__img-frame{
-  position:relative;
-  border-radius:20px;overflow:hidden;
-  box-shadow:
-    0 4px 6px rgba(58,42,30,0.06),
-    0 20px 50px rgba(58,42,30,0.1),
-    0 1px 0 rgba(214,178,122,0.15) inset;
-  border:1px solid rgba(214,178,122,0.15);
-  margin-bottom:var(--s-8);
-}
-.intro__img{
-  width:100%;aspect-ratio:4/5;object-fit:cover;
-  transition:transform 1.2s var(--ease);
-}
-.intro__img-frame:hover .intro__img{transform:scale(1.03)}
-
-/* Metallic frame accent */
-.intro__img-frame::after{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  border-radius:20px;
-  background:linear-gradient(180deg,rgba(214,178,122,0.06) 0%,transparent 30%,transparent 70%,rgba(58,42,30,0.04) 100%);
-}
-
-/* Caption below image */
-.intro__caption{
-  font-family:var(--ff-display);font-size:var(--fs-sm);font-style:italic;
-  color:#9C7443;letter-spacing:0.01em;
-}
-
-/* ─── Responsive ─── */
-@media(max-width:1024px){
-  .intro__wrap{grid-template-columns:1fr;gap:var(--s-12)}
-}
-@media(max-width:640px){
-  .intro{padding:clamp(3rem,8vh,5rem) var(--gutter)}
-  .intro__img{aspect-ratio:3/4}
-}
-
-/* ═══════════════════════════════════════════
-   WHY
-   ═══════════════════════════════════════════ */
-.why{background:var(--c-dark);color:var(--c-white);padding:var(--s-32) var(--gutter) var(--s-40)}
-.why__wrap{max-width:var(--max-w);margin:0 auto}
-.why__heading{font-size:var(--fs-2xl);line-height:1.06}
-.why__list{display:grid;border-top:1px solid var(--c-dark-3)}
-.why__item{display:grid;grid-template-columns:auto 1fr;gap:var(--s-8);padding:var(--s-10) 0;border-bottom:1px solid var(--c-dark-3);transition:background .4s}
-.why__item:hover{background:rgba(255,255,255,0.02)}
-.why__num{font-family:var(--ff-display);font-size:var(--fs-sm);color:var(--c-gold);padding-top:.15em;font-variant-numeric:tabular-nums}
-.why__item-title{font-family:var(--ff-display);font-size:var(--fs-lg);font-weight:400;margin-bottom:var(--s-3)}
-.why__item-text{font-size:var(--fs-sm);color:rgba(255,255,255,0.5);line-height:1.75;max-width:560px}
-
-/* ═══════════════════════════════════════════
-   TESTIMONIALS
-   ═══════════════════════════════════════════ */
-.testimonials{
-  padding:var(--s-32) var(--gutter) var(--s-24);
-  overflow:hidden;
-}
-.testimonials__wrap{max-width:var(--max-w);margin:0 auto}
-.testimonials__heading{font-size:var(--fs-2xl);line-height:1.06}
-.testimonials__stage{min-height:300px;position:relative;margin:var(--s-12) 0 var(--s-10)}
-.testimonial{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s}
-.testimonial--active{opacity:1;visibility:visible;position:relative}
-.testimonial__quote p{font-family:var(--ff-display);font-size:var(--fs-xl);font-weight:300;font-style:italic;line-height:1.45;max-width:720px}
-.testimonial__meta{margin-top:var(--s-8)}
-.testimonial__name{display:block;font-size:var(--fs-xs);font-weight:500;letter-spacing:var(--ls-wide);text-transform:uppercase;margin-bottom:var(--s-1)}
-.testimonial__detail{font-size:var(--fs-xs);color:var(--c-ink-4)}
-.testimonials__controls{display:flex;align-items:center;gap:var(--s-6)}
-.testimonials__btn{width:40px;height:40px;border:1px solid var(--c-border-d);display:flex;align-items:center;justify-content:center;color:var(--c-ink-3);transition:all .35s var(--ease);flex-shrink:0}
-.testimonials__btn:hover{background:var(--c-ink);border-color:var(--c-ink);color:var(--c-white)}
-.testimonials__progress{flex:1;max-width:200px;height:1px;background:var(--c-border-d);position:relative}
-.testimonials__progress-fill{position:absolute;left:0;top:0;height:100%;width:33.33%;background:var(--c-gold);transition:width .5s var(--ease)}
-.testimonials__count{font-size:var(--fs-xs);color:var(--c-ink-4);font-variant-numeric:tabular-nums}
-
-/* ═══════════════════════════════════════════
-   GALLERY
-   ═══════════════════════════════════════════ */
-.gallery{
-  padding:var(--s-32) var(--gutter) var(--s-24);
-  overflow:hidden;
-}
-.gallery__wrap{max-width:var(--max-w);margin:0 auto}
-.gallery__header{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s-8);margin-bottom:var(--s-12)}
-.gallery__heading{font-size:var(--fs-2xl);line-height:1.06}
-.gallery__sub{font-size:var(--fs-sm);color:var(--c-ink-3);line-height:1.7;max-width:320px;text-align:right;flex-shrink:0}
-.gallery__grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:6px}
-.gallery__item{position:relative;overflow:hidden;cursor:pointer;background:var(--c-dark-2)}
-.gallery__item img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease),filter .5s;filter:brightness(0.88)}
-.gallery__item:hover img{transform:scale(1.05);filter:brightness(1)}
-.gallery__item--wide{grid-column:span 2}
-.gallery__item--tall{grid-row:span 2}
-.gallery__item-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(17,17,17,0.75) 100%);opacity:0;transition:opacity .4s var(--ease);display:flex;align-items:flex-end;justify-content:space-between;padding:var(--s-5)}
-.gallery__item:hover .gallery__item-overlay{opacity:1}
-.gallery__item-label{font-family:var(--ff-display);font-size:1rem;font-weight:400;color:var(--c-white);letter-spacing:.02em}
-.gallery__item-plus{width:28px;height:28px;border:1px solid rgba(255,255,255,0.4);border-radius:50%;position:relative;transition:border-color .3s,transform .4s var(--ease)}
-.gallery__item-plus::before,.gallery__item-plus::after{content:'';position:absolute;background:var(--c-white);transition:background .3s}
-.gallery__item-plus::before{width:12px;height:1px;top:50%;left:50%;transform:translate(-50%,-50%)}
-.gallery__item-plus::after{width:1px;height:12px;top:50%;left:50%;transform:translate(-50%,-50%)}
-.gallery__item:hover .gallery__item-plus{border-color:var(--c-gold);transform:rotate(90deg)}
-.gallery__item:hover .gallery__item-plus::before,.gallery__item:hover .gallery__item-plus::after{background:var(--c-gold)}
-@media(max-width:1024px){.gallery__grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px}.gallery__header{flex-direction:column;align-items:flex-start}.gallery__sub{text-align:left}}
-@media(max-width:640px){.gallery__grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.gallery__item--tall{grid-row:span 1}}
-
-/* ─── LIGHTBOX ─── */
-.lightbox{position:fixed;inset:0;z-index:9990;background:rgba(10,10,10,0.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s var(--ease);backdrop-filter:blur(20px)}
-.lightbox.is-open{opacity:1;pointer-events:auto}
-.lightbox__close{position:absolute;top:var(--s-6);right:var(--s-6);width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:rgba(255,255,255,0.6);transition:color .3s;z-index:2}
-.lightbox__close:hover{color:var(--c-gold)}
-.lightbox__prev,.lightbox__next{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);transition:all .3s var(--ease);z-index:2}
-.lightbox__prev{left:var(--s-6)}
-.lightbox__next{right:var(--s-6)}
-.lightbox__prev:hover,.lightbox__next:hover{background:var(--c-gold);border-color:var(--c-gold);color:var(--c-dark)}
-.lightbox__content{position:relative;max-width:85vw;max-height:85vh;display:flex;flex-direction:column;align-items:center}
-.lightbox__img{max-width:100%;max-height:78vh;object-fit:contain;opacity:0;transform:scale(0.95);transition:opacity .4s var(--ease),transform .5s var(--ease2)}
-.lightbox.is-open .lightbox__img{opacity:1;transform:scale(1)}
-.lightbox__caption{font-family:var(--ff-display);font-size:1rem;color:rgba(255,255,255,0.7);margin-top:var(--s-4);letter-spacing:.03em}
-.lightbox__count{font-size:var(--fs-xs);color:rgba(255,255,255,0.3);margin-top:var(--s-2);font-variant-numeric:tabular-nums}
-
-/* ═══════════════════════════════════════════
-   STATS
-   ═══════════════════════════════════════════ */
-.stats{
-  padding:var(--s-20) var(--gutter);
-  border-top:1px solid var(--c-border);border-bottom:1px solid var(--c-border);
-}
-.stats__wrap{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:center;gap:clamp(1.5rem,4vw,4rem)}
-.stats__item{text-align:center;flex:1}
-.stats__val{font-family:var(--ff-display);font-size:var(--fs-2xl);font-weight:300;line-height:1;font-variant-numeric:tabular-nums}
-.stats__val--suffix::after{content:'%';font-size:.55em}
-.stats__label{font-size:var(--fs-xs);font-weight:500;letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--c-ink-4);margin-top:var(--s-3);display:block}
-.stats__sep{width:1px;height:3rem;background:var(--c-border-d);flex-shrink:0}
-@media(max-width:640px){.stats__wrap{flex-direction:column;gap:var(--s-8)}.stats__sep{width:3rem;height:1px}}
-
-/* ═══════════════════════════════════════════
-   EVENT TYPES
-   ═══════════════════════════════════════════ */
-.event-types{
-  padding:var(--s-32) var(--gutter) var(--s-24);
-  overflow:hidden;
-}
-.event-types__wrap{max-width:var(--max-w);margin:0 auto}
-.event-types__header{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:var(--s-16)}
-.event-types__heading{font-size:var(--fs-2xl);line-height:1.06;margin-bottom:var(--s-5)}
-.event-types__sub{font-size:var(--fs-base);color:var(--c-ink-3);line-height:1.7;max-width:440px}
-.event-types__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--c-border-d)}
-.event-type{display:grid;grid-template-columns:1fr 1fr;min-height:280px;overflow:hidden;transition:background .4s}
-.event-type:hover{background:var(--c-dark)}
-.event-type__img{overflow:hidden;position:relative}
-.event-type__img img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease),filter .5s;filter:brightness(0.85)}
-.event-type:hover .event-type__img img{transform:scale(1.06);filter:brightness(1)}
-.event-type__info{display:flex;flex-direction:column;justify-content:center;padding:clamp(1.5rem,3vw,2.5rem);transition:color .4s}
-.event-type__num{font-family:var(--ff-display);font-size:var(--fs-sm);color:var(--c-gold);margin-bottom:var(--s-3);font-variant-numeric:tabular-nums}
-.event-type__title{font-family:var(--ff-display);font-size:var(--fs-lg);font-weight:400;line-height:1.2;margin-bottom:var(--s-3);transition:color .4s}
-.event-type__text{font-size:var(--fs-sm);color:var(--c-ink-3);line-height:1.7;transition:color .4s}
-.event-type:hover .event-type__title{color:var(--c-white)}
-.event-type:hover .event-type__text{color:rgba(255,255,255,0.5)}
-.event-type:hover .event-type__num{color:var(--c-gold-2)}
-@media(max-width:768px){.event-types__grid{grid-template-columns:1fr}.event-type{grid-template-columns:1fr;min-height:auto}.event-type__img{height:220px}}
-
-/* ═══════════════════════════════════════════
-   BOOKING
-   ═══════════════════════════════════════════ */
-.booking{position:relative;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-bottom:var(--s-20)}
-.booking__wrap{width:min(90vw,700px);display:flex;flex-direction:column;align-items:center;text-align:center}
-.booking__heading{font-size:var(--fs-2xl);line-height:1.06;margin-bottom:var(--s-5)}
-.booking__text{font-size:var(--fs-base);color:var(--c-ink-3);line-height:1.8;margin-bottom:var(--s-10)}
-.booking__info{display:flex;flex-direction:column;gap:var(--s-6)}
-.booking__info-item{display:flex;flex-direction:column;gap:2px}
-.booking__info-label{font-size:var(--fs-xs);font-weight:500;letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--c-gold)}
-.booking__info-item a,.booking__info-item span{font-size:var(--fs-sm);color:var(--c-ink-2)}
-.booking__map{background:var(--c-dark-2);border-radius:12px;height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--s-8)}
-.booking__cta{text-align:center}
-@media(max-width:1024px){.booking__wrap{grid-template-columns:1fr}}
-
-/* ─── MAP ─── */
-.map{height:360px;background:var(--c-dark-2);display:flex;align-items:center;justify-content:center}
-.map__pin{display:flex;align-items:center;gap:var(--s-3);color:var(--c-gold-2)}
-.map__pin span{font-size:var(--fs-sm);color:rgba(255,255,255,0.5)}
-
-/* ─── WHATSAPP (Liquid Glass 3D) ─── */
-.booking__cta{margin-top:var(--s-12);text-align:center}
-.whatsapp{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:14px 28px 14px 22px;
-  border-radius:100px;
-  background:linear-gradient(135deg,rgba(0,77,64,0.92) 0%,rgba(0,90,75,0.95) 50%,rgba(0,60,50,0.98) 100%);
-  border:1px solid rgba(255,255,255,0.15);
-  border-bottom-color:rgba(0,0,0,0.2);
-  color:#fff;
-  font-family:var(--ff-body);font-size:14px;font-weight:500;
-  letter-spacing:0.01em;
-  text-decoration:none;
-  box-shadow:
-    0 4px 0 rgba(0,40,32,0.7),
-    0 6px 12px rgba(0,0,0,0.2),
-    0 12px 24px rgba(0,77,64,0.25),
-    inset 0 1px 0 rgba(255,255,255,0.2),
-    inset 0 -2px 0 rgba(0,0,0,0.15);
-  transition:all .15s cubic-bezier(0.16,1,0.3,1);
-  position:relative;
-  overflow:hidden;
-  transform:translateY(0);
-}
-.whatsapp::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:50%;
-  background:linear-gradient(180deg,rgba(255,255,255,0.12) 0%,rgba(255,255,255,0) 100%);
-  border-radius:100px 100px 0 0;pointer-events:none;
-}
-.whatsapp::after{
-  content:'';position:absolute;inset:0;border-radius:100px;
-  background:radial-gradient(ellipse at 30% 0%,rgba(255,255,255,0.15) 0%,transparent 50%);
-  pointer-events:none;
-}
-.whatsapp svg{width:22px;height:22px;color:#fff;flex-shrink:0;position:relative;z-index:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.25))}
-.whatsapp span{position:relative;z-index:1;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
-.whatsapp:hover{
-  background:linear-gradient(135deg,rgba(0,77,64,1) 0%,rgba(0,100,82,1) 50%,rgba(0,60,50,1) 100%);
-  border-color:rgba(255,255,255,0.25);
-  box-shadow:
-    0 6px 0 rgba(0,40,32,0.7),
-    0 8px 16px rgba(0,0,0,0.22),
-    0 16px 32px rgba(0,77,64,0.3),
-    inset 0 1px 0 rgba(255,255,255,0.25),
-    inset 0 -2px 0 rgba(0,0,0,0.12);
-  transform:translateY(-2px);
-}
-.whatsapp:active{
-  background:linear-gradient(135deg,rgba(0,60,50,0.95) 0%,rgba(0,77,64,0.98) 50%,rgba(0,50,42,1) 100%);
-  transform:translateY(4px);
-  box-shadow:
-    0 0px 0 rgba(0,40,32,0.7),
-    0 2px 6px rgba(0,0,0,0.18),
-    0 4px 12px rgba(0,77,64,0.2),
-    inset 0 2px 4px rgba(0,0,0,0.15),
-    inset 0 -1px 0 rgba(255,255,255,0.1);
-  transition-duration:.08s;
-}
-
-/* ─── FOOTER ─── */
-.footer{background:var(--c-dark);color:var(--c-white);padding:var(--s-20) var(--gutter) var(--s-10)}
-.footer__wrap{max-width:var(--max-w);margin:0 auto}
-.footer__top{display:grid;grid-template-columns:1fr 2fr;gap:clamp(2rem,5vw,5rem);padding-bottom:var(--s-16);border-bottom:1px solid var(--c-dark-3)}
-.footer__wordmark{font-family:var(--ff-display);font-size:1.4rem;font-weight:300;letter-spacing:.08em;display:block}
-.footer__tagline{font-size:var(--fs-xs);color:var(--c-gold);letter-spacing:var(--ls-wide);text-transform:uppercase;margin-top:var(--s-2);display:block}
-.footer__cols{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-8)}
-.footer__col-head{font-size:var(--fs-xs);font-weight:500;letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--c-gold);display:block;margin-bottom:var(--s-5)}
-.footer__col a,.footer__col span{display:block;font-size:var(--fs-sm);color:rgba(255,255,255,0.45);padding:var(--s-1) 0;transition:color .3s}
-.footer__col a:hover{color:var(--c-white)}
-.footer__bottom{display:flex;align-items:center;justify-content:space-between;padding-top:var(--s-8)}
-.footer__copy{font-size:var(--fs-xs);color:rgba(255,255,255,0.25)}
-.footer__socials{display:flex;gap:var(--s-5)}
-.footer__socials a{font-size:var(--fs-xs);font-weight:500;letter-spacing:.08em;color:rgba(255,255,255,0.35);transition:color .3s}
-.footer__socials a:hover{color:var(--c-gold)}
-@media(max-width:768px){.footer__top{grid-template-columns:1fr}.footer__cols{grid-template-columns:1fr;gap:var(--s-6)}.footer__bottom{flex-direction:column;gap:var(--s-4);text-align:center}}
-
-/* ═══════════════════════════════════════════
-   BUTTONS (shared)
-   ═══════════════════════════════════════════ */
-.btn{display:inline-flex;align-items:center;gap:var(--s-3);font-family:var(--ff-body);font-size:var(--fs-xs);font-weight:500;letter-spacing:var(--ls-wide);text-transform:uppercase;padding:.85rem 2rem;position:relative;overflow:hidden;transition:color .4s;cursor:pointer}
-.btn__label{position:relative;z-index:1}
-.btn__icon{position:relative;z-index:1;transition:transform .4s var(--ease);font-size:1.1em}
-.btn:hover .btn__icon{transform:translateX(3px)}
-.btn--gold{background:var(--c-gold);color:var(--c-dark)}
-.btn--gold::before{content:'';position:absolute;inset:0;background:var(--c-gold-3);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease2)}
-.btn--gold:hover::before{transform:scaleX(1);transform-origin:left}
-.btn--full{width:100%;justify-content:center}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
